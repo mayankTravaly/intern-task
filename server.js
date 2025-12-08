@@ -224,7 +224,7 @@ app.get('/', (req, res) => {
   res.json({
     service: 'myTravaly Intern Task API',
     endpoints: {
-      bookings: 'GET /api/bookings?days=7&status=confirmed&sort=checkIn&order=asc',
+      bookings: 'GET /api/bookings?days=7&status=confirmed&order=asc',
       metrics: 'GET /api/metrics?days=30',
       trends: 'GET /api/trends?months=6',
       health: 'GET /api/health'
