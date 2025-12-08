@@ -222,7 +222,7 @@ app.get('/api/health', (req, res) => {
 // Root endpoint with documentation
 app.get('/', (req, res) => {
   res.json({
-    service: 'myTravaly Intern Task API',
+    service: 'MyTravaly Intern Task API',
     endpoints: {
       bookings: 'GET /api/bookings?days=7&status=confirmed&order=asc',
       metrics: 'GET /api/metrics?days=30',
