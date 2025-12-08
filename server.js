@@ -227,7 +227,6 @@ app.get('/', (req, res) => {
       bookings: 'GET /api/bookings?days=7&status=confirmed&sort=checkIn&order=asc',
       metrics: 'GET /api/metrics?days=30',
       trends: 'GET /api/trends?months=6',
-      realtime: 'GET /api/realtime (SSE)',
       health: 'GET /api/health'
     },
     example: 'https://your-render-app.onrender.com/api/bookings?days=30&status=confirmed'
