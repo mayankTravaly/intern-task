@@ -235,36 +235,26 @@ app.get('/', (req, res) => {
 
 const hotels = [
   {
-    ota_property_id: "3318608196",
-    hotel_name: "Cozy Stay Inn",
-    star_rating: 2,
+    ota_property_id: "3318608195",
+    hotel_name: "Hotel Cozy Ambience",
+    star_rating: 4,
     property_type: "HOTEL",
-
     checkin: "12:00:00",
     checkout: "12:00:00",
-
-    description: "A cozy stay inn in Bangalore",
-
+    description: "Hotel Cozy Ambience is a charming property located in the heart of Bangalore",
+    hotel_image: "898144366-1997834712.jpg",
     currency: "INR",
-
     street: "170, 6th Cross Road",
     city: "Bengaluru",
     state: "Karnataka",
-
-    // ISO2 country code
     country: "IN",
-
-    latitude: 12.9810310,
-    longitude: 77.5321283,
-
-    time_zone: "Asia/Kolkata",
+    latitude: 12.9810307,
+    longitude: 77.5321263,
+    time_zone: "Asia/Calcutta",
     pin_code: "560076",
-
     phone: "+919876543210",
     email: "info@cozystayinn.com",
-
     established_date: "2018-06-15",
-
     hotel_images: [
       {
         url: "https://example.com/images/hotel1.jpg",
@@ -276,38 +266,26 @@ const hotels = [
       }
     ]
   },
-
   {
     ota_property_id: "4412789123",
     hotel_name: "Royal Comfort Suites",
     star_rating: 4,
     property_type: "HOTEL",
-
     checkin: "14:00:00",
     checkout: "11:00:00",
-
     description: "Luxury stay in Mumbai city center",
-
     currency: "INR",
-
     street: "Linking Road",
     city: "Mumbai",
     state: "Maharashtra",
-
-    // ISO2 country code
     country: "IN",
-
     latitude: 19.076090,
     longitude: 72.877426,
-
     time_zone: "Asia/Kolkata",
     pin_code: "400050",
-
     phone: "+919812345678",
     email: "contact@royalcomfort.com",
-
     established_date: "2015-03-20",
-
     hotel_images: [
       {
         url: "https://example.com/images/royal1.jpg",
