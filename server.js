@@ -235,7 +235,7 @@ app.get('/', (req, res) => {
 
 const hotels = [
   {
-    ota_property_id: 3318608196,
+    ota_property_id: "3318608196",
     hotel_name: "Cozy Stay Inn",
     star_rating: 2,
     property_type: "UNKNOWN",
@@ -254,7 +254,7 @@ const hotels = [
     pin_code: "560076"
   },
   {
-    ota_property_id: 4412789123,
+    ota_property_id: "4412789123",
     hotel_name: "Royal Comfort Suites",
     star_rating: 4,
     property_type: "HOTEL",
