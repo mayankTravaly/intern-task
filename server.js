@@ -282,8 +282,8 @@ const hotels = [
  */
 app.get('/api/hotels', (req, res) => {
   try {
-    const page = parseInt(req.query.page) || 1;
-    const limit = parseInt(req.query.limit) || 10;
+    const page = parseInt(req.query.page);
+    const limit = parseInt(req.query.limit);
 
     if (page < 1 || limit < 1) {
       return res.status(400).json({
