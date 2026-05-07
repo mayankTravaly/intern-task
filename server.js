@@ -233,6 +233,89 @@ app.get('/', (req, res) => {
   });
 });
 
+const hotels = [
+  {
+    ota_property_id: 3318608196,
+    hotel_name: "Cozy Stay Inn",
+    star_rating: 2,
+    property_type: "UNKNOWN",
+    checkin: "12:00:00",
+    checkout: "12:00:00",
+    description: "A cozy stay inn in Bangalore",
+    hotel_image: "898144366-1997834712.jpg",
+    currency: "INR",
+    street: "170, 6th Cross Road",
+    city: "Bengaluru",
+    state: "Karnataka",
+    country: "India",
+    latitude: 12.9810310,
+    longitude: 77.5321283,
+    time_zone: "Asia/Calcutta",
+    pin_code: "560076"
+  },
+  {
+    ota_property_id: 4412789123,
+    hotel_name: "Royal Comfort Suites",
+    star_rating: 4,
+    property_type: "HOTEL",
+    checkin: "14:00:00",
+    checkout: "11:00:00",
+    description: "Luxury stay in Mumbai city center",
+    hotel_image: "royal-comfort.jpg",
+    currency: "INR",
+    street: "Linking Road",
+    city: "Mumbai",
+    state: "Maharashtra",
+    country: "India",
+    latitude: 19.076090,
+    longitude: 72.877426,
+    time_zone: "Asia/Calcutta",
+    pin_code: "400050"
+  }
+];
+
+/**
+ * Paginated Hotels API
+ *
+ * Example:
+ * GET /api/hotels?page=1&limit=1
+ */
+app.get('/api/hotels', (req, res) => {
+  try {
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+
+    if (page < 1 || limit < 1) {
+      return res.status(400).json({
+        success: false,
+        message: 'Page and limit must be greater than 0'
+      });
+    }
+
+    const startIndex = (page - 1) * limit;
+    const endIndex = startIndex + limit;
+
+    const paginatedHotels = hotels.slice(startIndex, endIndex);
+
+    res.json({
+      success: true,
+      pagination: {
+        total: hotels.length,
+        page,
+        limit,
+        totalPages: Math.ceil(hotels.length / limit)
+      },
+      data: paginatedHotels
+    });
+
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: 'Internal server error'
+    });
+  }
+});
+
 // Start server
 app.listen(PORT, () => {
   console.log(`🚀 myTravaly API running on port ${PORT}`);
