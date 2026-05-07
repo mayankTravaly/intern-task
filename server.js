@@ -267,7 +267,7 @@ const hotels = [
     ]
   },
   {
-    ota_property_id: "3318608195",
+    ota_property_id: "3318608198",
     hotel_name: "Cozy Ambience",
     star_rating: 4,
     property_type: "HOTEL",
