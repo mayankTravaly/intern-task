@@ -297,16 +297,7 @@ app.get('/api/hotels', (req, res) => {
 
     const paginatedHotels = hotels.slice(startIndex, endIndex);
 
-    res.json({
-      success: true,
-      pagination: {
-        total: hotels.length,
-        page,
-        limit,
-        totalPages: Math.ceil(hotels.length / limit)
-      },
-      data: paginatedHotels
-    });
+    res.json(paginatedHotels);
 
   } catch (error) {
     res.status(500).json({
