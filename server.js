@@ -93,6 +93,36 @@ const hotels = [
     time_zone: null,
     pin_code: null,
     hotel_images: []
+  },
+  {
+    "ota_property_id": "TEST-TWO-OTA-001",
+    "hotel_name": "SUNIL RESIDENCY",
+    "star_rating": 2,
+    "property_type": "HOTEL",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "country": "India",
+    "latitude": 12.9905416,
+    "longitude": 77.5508425,
+    "currency": "INR",
+    "checkin": "12:00:00",
+    "checkout": "11:00:00",
+    "description": "Located in shivanahalli Rajajinagar, Hotel Sunil Residency is an ideal choice if you are looking for clean and spacious rooms at pocket friendly prices. The rooms have classic wooden furniture and includes a dresser. Hotel has a seating area, free wifi and an elevator to make the guests stay more comfortable.",
+    "street": "#79/B,1st Stage, 5th Phase,West of chord road, Thimmaiah Road, Rajajinagar,Shivanagar",
+    "pin_code": "560044",
+    "time_zone": "Asia/Calcutta",
+    "phone": "",
+    "email": "",
+    "hotel_images": [
+      {
+        "url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800",
+        "subtitle": "Hotel image"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800",
+        "subtitle": "Hotel image"
+      }
+    ]
   }
 ];
 
