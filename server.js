@@ -96,7 +96,18 @@ const hotels = [
   }
 ];
 
+const API_KEY = "MYTRAVALY_TEST_2026_SECRET";
+
 app.get('/api/hotels', (req, res) => {
+  const apiKey = req.headers['x-api-key'];
+
+  if (!apiKey || apiKey !== API_KEY) {
+    return res.status(401).json({
+      status: false,
+      message: "Unauthorized. Invalid or missing API key."
+    });
+  }
+
   res.json({
     status: true,
     message: "Hotels retrieved successfully",
